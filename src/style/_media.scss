@@ -1,0 +1,59 @@
+@media screen and (max-width:1366px) {
+  div .details_container {
+    padding: 15px 0;       
+  }
+}
+
+@media screen and (max-width:768px) {
+  .details_content {
+    flex-direction: column;
+  }
+
+  div .details_box, div .details_info {
+    width: 75%;
+  }
+
+  .title_home {
+    top: 0;
+  }
+  
+  .characters_img .title_home span {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: none;
+    font-size: 40px;
+  }
+
+  .comics_img .title_home span {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: none;
+    font-size: 40px;
+  }
+
+  .box_nav {
+    height: 225px;
+  }
+
+  .logo_marvel {
+    max-width: 150px;
+  }
+
+  .nav_link {
+    justify-content: space-around;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media screen and (max-width:500px) {
+
+  .box_nav {
+    height: 220px;
+  }
+  .nav_link {
+    font-size: 17px;
+    letter-spacing: 0.02em;
+  } 
+}
+
