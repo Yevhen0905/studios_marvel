@@ -60,8 +60,18 @@ export default {
     },
     methods: {
         async getComic() {
+            const ts = new Date().getTime();
+            const hash = md5(ts + KEY.PRIVATE_KEY + KEY.PUBLIC_KEY);
             const ComicId = this.$route.params.id;
-            const res = await axios.get(`${ENDPOINT.COMIC}/${ComicId}?apikey=${KEY.PUBLIC_KEY}`)
+            // const res = await axios.get(`${ENDPOINT.COMIC}/${ComicId}?apikey=${KEY.PUBLIC_KEY}`)
+            const res = await axios.get(ENDPOINT.COMIC, {
+               params: {
+                    id: ComicId,
+                    ts: ts,
+                    hash: hash, 
+                    apikey: KEY.PUBLIC_KEY,
+               }
+            })
             this.comic = res.data.data.results;
 
         }

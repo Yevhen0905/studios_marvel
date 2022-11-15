@@ -122,11 +122,15 @@ export default {
   },
   methods: {
     async getCharacters() {
+      const ts = new Date().getTime();
+      const hash = md5(ts + KEY.PRIVATE_KEY + KEY.PUBLIC_KEY);
       const offset = this.limit*(this.page - 1); 
       const res = await axios.get(ENDPOINT.CHARACTER, {
         params: {   
-          offset: offset, 
+          ts: ts,
           apikey: KEY.PUBLIC_KEY,
+          hash: hash,          
+          offset: offset,
         }
       })
         this.scrollToTop()
@@ -134,13 +138,17 @@ export default {
     },
 
     async searchCharacter() {
+      const ts = new Date().getTime();
+      const hash = md5(ts + KEY.PRIVATE_KEY + KEY.PUBLIC_KEY);
       const searchChar = this.searchChar;
       const offset = this.limit*(this.searchPage - 1); 
       const res = await axios.get(`${ENDPOINT.CHARACTER}`, {
         params: {
-          nameStartsWith: searchChar,
+          ts: ts,   
+          apikey: KEY.PUBLIC_KEY,
+          hash: hash,  
+          nameStartsWith: searchChar,  
           offset: offset,
-          apikey: KEY.PUBLIC_KEY
         },
       })
       this.scrollToTop()   

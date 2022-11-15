@@ -117,25 +117,32 @@ export default {
   },
   methods: {
     async getComics() {
-      // const res = await axios.get(`${ENDPOINT.COMIC}?apikey=${KEY.PUBLIC_KEY}`)
+      const ts = new Date().getTime();
+      const hash = md5(ts + KEY.PRIVATE_KEY + KEY.PUBLIC_KEY);
       const offset = this.limit*(this.page - 1); 
       const res = await axios.get(ENDPOINT.COMIC, {
         params: {
-          offset: offset, 
+          ts: ts,
           apikey: KEY.PUBLIC_KEY,
+          hash: hash,  
+          offset: offset, 
         }
       })
       this.scrollToTop();
       this.comics = res.data.data;
     },
     async searchComics() {
+      const ts = new Date().getTime();
+      const hash = md5(ts + KEY.PRIVATE_KEY + KEY.PUBLIC_KEY);
       const searchComic = this.searchComic;
       const offset = this.limit*(this.searchPage - 1);
       const res = await axios.get(`${ENDPOINT.COMIC}`, {
         params: {
+          ts: ts,
+          apikey: KEY.PUBLIC_KEY,
+          hash: hash,  
           titleStartsWith: searchComic,
           offset: offset,
-          apikey: KEY.PUBLIC_KEY
         },
       })
       this.scrollToTop();
