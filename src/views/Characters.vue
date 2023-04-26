@@ -133,9 +133,9 @@ export default {
           offset: offset,
         }
       })
-      console.log(res.data);
         this.scrollToTop()
         this.characters = res.data.data; 
+        console.log(this.characters);
     },
 
     async searchCharacter() {
@@ -152,7 +152,7 @@ export default {
           offset: offset,
         },
       })
-      console.log(res);
+      // console.log(res);
       this.scrollToTop()   
       this.searchResults = res.data.data;
 
