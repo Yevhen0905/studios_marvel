@@ -1,4 +1,4 @@
-# studios_marvel
+# marvel_product
 
 ## Project setup
 ```
