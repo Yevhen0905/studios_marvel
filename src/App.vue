@@ -1,25 +1,25 @@
-<template >
+<template>
   <div id="app">
     <div class="hero">
-      <Header/>
-      <Navigation/>
+      <Header />
+      <Navigation />
     </div>
     <router-view />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from './components/Footer.vue'
-import Header from './components/Header.vue'
-import Navigation from './components/Navigation.vue'
+  import Footer from './components/Footer.vue';
+  import Header from './components/Header.vue';
+  import Navigation from './components/Navigation.vue';
 
-export default {
-  name: 'App',
-  components: {
-    Navigation,
-    Header,
-    Footer
-  }
-}
+  export default {
+    name: 'App',
+    components: {
+      Navigation,
+      Header,
+      Footer
+    }
+  };
 </script>
