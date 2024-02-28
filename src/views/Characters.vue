@@ -69,7 +69,6 @@
         });
         this.scrollToTop();
         this.characters = res.data.data;
-        console.log(this.characters);
       },
 
       async searchCharacter(page) {
