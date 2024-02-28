@@ -1,0 +1,444 @@
+.main {
+  background-color: #1e1c1c;
+}
+
+.container {
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.section_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.block_search {
+  display: flex;
+  // justify-content: end;
+}
+
+.block_search_item {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+
+  .input_search {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #978f8f;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+    color: #fbfbfb;
+  }
+
+  .btn_search {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #433a3a;
+    font-family: 'Roboto', sans-serif;
+    color: #fbfbfb;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 95px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #8d969f;
+      color: #1e1c1c;
+    }
+  }
+}
+
+.block_btn_search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loader_block {
+  display: flex;
+  justify-content: center;
+  color: #ed1d24;
+}
+
+.title {
+  color: #ed1d24;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  padding: 0;
+  margin: 20px 0 60px;
+}
+
+.content_item {
+  position: relative;
+  max-width: 270px;
+  width: 100%;
+  margin: 15px;
+  border: thin solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(0.97);
+  }
+}
+
+.content_image {
+  min-height: 270px;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.content_text {
+  font-family: 'Roboto', sans-serif;
+  color: #fbfbfb;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.08em;
+  margin: 15px 15px 25px;
+}
+
+.content_btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #ed1d24;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: rgba(205, 20, 20, 0.12);
+    border-radius: 4px;
+  }
+}
+
+.pagination {
+  padding-bottom: 20px;
+}
+
+.pagination .theme--light.v-pagination .v-pagination__item--active {
+  color: #fff;
+  background-color: #3476ef;
+}
+
+.v-pagination__more {
+  color: #fff;
+}
+
+.container_box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px 15px;
+  background-color: #1e1e1e;
+}
+
+.characters_img {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.4), rgba(25, 32, 72, 0.6)),
+    url(../assets/grut-kartinki-12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 43% center;
+  height: 700px;
+  width: 49%;
+  box-shadow: 10px 10px 50px -10px rgb(0 0 0 / 50%);
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(0.99);
+    opacity: 0.5;
+  }
+}
+
+.comics_img {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.4), rgba(25, 32, 72, 0.4)),
+    url(../assets/1366_2000.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 700px;
+  width: 49%;
+  box-shadow: 10px 10px 50px -10px rgb(0 0 0 / 50%);
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(0.99);
+    opacity: 0.5;
+  }
+}
+
+.title_home {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+}
+
+.title_home span {
+  color: #ed1d24;
+  font-weight: 400;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.7) 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .title_home {
+    top: 0;
+  }
+  .characters_img .title_home span {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: none;
+    font-size: 40px;
+  }
+
+  .comics_img .title_home span {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: none;
+    font-size: 40px;
+  }
+}
+
+.box_nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right top, rgba(0, 0, 0, 0.8), rgba(25, 32, 72, 0.3)),
+    url(../assets/ArticleImage_166787.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  height: 300px;
+}
+
+.nav_link {
+  display: flex;
+  align-items: end;
+  max-width: 960px;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 38px;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  cursor: pointer;
+
+  .link_item {
+    text-shadow: 3px 1px 9px #4e7fa3;
+    font-weight: bold;
+    color: #2f86dc;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    padding: 10px;
+
+    &.router-link-exact-active {
+      color: #fbfbfb;
+      text-shadow: 3px 1px 9px #4e7fa3;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .box_nav {
+    height: 225px;
+  }
+
+  .nav_link {
+    justify-content: space-around;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box_nav {
+    height: 220px;
+  }
+  .nav_link {
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+}
+//header
+.logo_marvel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 150px;
+  opacity: 0.7;
+  box-shadow: 0px 13px 8px #d42417;
+}
+@media screen and (max-width: 768px) {
+  .logo_marvel {
+    max-width: 100px;
+  }
+}
+
+//footer
+.footer {
+  width: 100%;
+  background-color: rgb(17, 15, 11);
+}
+
+.footer_container {
+  max-width: 1350px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer_img {
+  width: 150px;
+  opacity: 0.7;
+}
+
+.footer_link {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.1em;
+  align-items: center;
+}
+
+.footer_block {
+  width: 100%;
+}
+
+.footer_block_item {
+  display: flex;
+}
+
+.footer_link_item {
+  display: block;
+  text-decoration: none;
+  color: #8d969f;
+  font-family: inherit;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: #f6f8fa;
+  }
+}
+
+.social_block {
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.1em;
+}
+
+.social_block_text {
+  color: #8d969f;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.social_block_link {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.social_link {
+  color: #8d969f;
+  font-size: 30px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: #f6f8fa;
+  }
+}
+
+.footer_caption {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #ed1d24;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_link,
+  .social_block {
+    font-size: 17px;
+  }
+
+  .social_link {
+    font-size: 23px;
+  }
+
+  .footer_img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer_link,
+  .social_block {
+    font-size: 12px;
+  }
+
+  .social_link {
+    font-size: 12px;
+  }
+
+  .footer_caption {
+    font-size: 11px;
+  }
+
+  .footer_img {
+    width: 60px;
+  }
+}

@@ -1,7 +1,17 @@
+@import './modules.scss';
+@import './details.scss';
 
-body, h1, h2, h3, h4, p, img, a, span {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+img,
+a,
+span {
+  margin: 0;
+  padding: 0;
 }
 #app {
   -webkit-font-smoothing: antialiased;
@@ -12,4 +22,5 @@ body, h1, h2, h3, h4, p, img, a, span {
 .hero {
   position: relative;
 }
+
 
