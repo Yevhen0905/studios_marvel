@@ -31,7 +31,7 @@
 
 <script>
   import axios from 'axios';
-  import {ENDPOINT, KEY} from '@/configs/marvelapp';
+  import {ENDPOINT, KEY} from '@/configs/marvel_app';
   import BackTop from '../components/BackTop.vue';
   import AllResultsCharacters from '@/components/AllResultsCharacters.vue';
   import SearchResultsCharacters from '@/components/SearchResultsCharacters.vue';

@@ -42,7 +42,7 @@
 
 <script>
   import axios from 'axios';
-  import {ENDPOINT, KEY} from '@/configs/marvelapp';
+  import {ENDPOINT, KEY} from '@/configs/marvel_app';
 
   export default {
     name: 'CharacterDetails',
@@ -74,6 +74,4 @@
   };
 </script>
 
-<style lang="scss">
-  
-</style>
+<style lang="scss"></style>
