@@ -9,11 +9,19 @@
       >
         <img
           class="content_image"
-          :src="character.thumbnail.path + '/' + 'standard_fantastic' + '.' + character.thumbnail.extension"
+          :src="
+            character.thumbnail.path +
+            '/' +
+            'standard_fantastic' +
+            '.' +
+            character.thumbnail.extension
+          "
           alt=""
         />
         <h3 class="content_text">{{ character.name }}</h3>
-        <button class="content_btn" :to="{path: '/character/' + character.id}">About character</button>
+        <button class="content_btn" :to="{path: '/character/' + character.id}">
+          About character
+        </button>
       </router-link>
     </div>
     <div class="pagination">

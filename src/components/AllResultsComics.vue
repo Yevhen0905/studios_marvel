@@ -1,14 +1,27 @@
 <template>
   <div class="wrapper_all_results">
     <div class="section_content">
-      <router-link class="content_item" :to="`/comics/${comic.id}`" v-for="comic in comics.results" :key="comic.id">
+      <router-link
+        class="content_item"
+        :to="`/comics/${comic.id}`"
+        v-for="comic in comics.results"
+        :key="comic.id"
+      >
         <img
           class="content_image"
-          :src="comic.thumbnail.path + '/' + 'standard_fantastic' + '.' + comic.thumbnail.extension"
+          :src="
+            comic.thumbnail.path +
+            '/' +
+            'standard_fantastic' +
+            '.' +
+            comic.thumbnail.extension
+          "
           alt=""
         />
         <h3 class="content_text">{{ comic.title }}</h3>
-        <button class="content_btn" :to="{path: '/comic/' + comic.id}">About character</button>
+        <button class="content_btn" :to="{path: '/comic/' + comic.id}">
+          About character
+        </button>
       </router-link>
     </div>
     <div class="pagination">

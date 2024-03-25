@@ -10,11 +10,19 @@
       >
         <img
           class="content_image"
-          :src="searchComic.thumbnail.path + '/' + 'standard_fantastic' + '.' + searchComic.thumbnail.extension"
+          :src="
+            searchComic.thumbnail.path +
+            '/' +
+            'standard_fantastic' +
+            '.' +
+            searchComic.thumbnail.extension
+          "
           alt=""
         />
         <h3 class="content_text">{{ searchComic.title }}</h3>
-        <button class="content_btn" :to="{path: '/comic/' + searchComic.id}">About character</button>
+        <button class="content_btn" :to="{path: '/comic/' + searchComic.id}">
+          About character
+        </button>
       </router-link>
     </div>
     <div v-if="searchResults.results.length > 19" class="pagination">

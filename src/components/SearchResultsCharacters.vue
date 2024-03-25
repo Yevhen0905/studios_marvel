@@ -9,11 +9,19 @@
       >
         <img
           class="content_image"
-          :src="searchChar.thumbnail.path + '/' + 'standard_fantastic' + '.' + searchChar.thumbnail.extension"
+          :src="
+            searchChar.thumbnail.path +
+            '/' +
+            'standard_fantastic' +
+            '.' +
+            searchChar.thumbnail.extension
+          "
           alt=""
         />
         <h3 class="content_text">{{ searchChar.name }}</h3>
-        <button class="content_btn" :to="{path: '/character/' + searchChar.id}">About character</button>
+        <button class="content_btn" :to="{path: '/character/' + searchChar.id}">
+          About character
+        </button>
       </router-link>
     </div>
     <div v-if="searchResults.results.length > 19" class="pagination">

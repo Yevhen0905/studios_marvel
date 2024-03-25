@@ -3,7 +3,11 @@
     <div class="container details_container">
       <div class="details_content" v-for="char in character" :key="char.key">
         <div class="details_box">
-          <img class="details_img" :src="char.thumbnail.path + '.' + char.thumbnail.extension" alt="" />
+          <img
+            class="details_img"
+            :src="char.thumbnail.path + '.' + char.thumbnail.extension"
+            alt=""
+          />
         </div>
         <div class="details_info">
           <h3 class="details_text">{{ char.name }}</h3>
@@ -23,13 +27,21 @@
           <div class="details_item_block">
             <div class="details_item">
               <h3 class="details_item_title">Series</h3>
-              <p class="details_item_text" v-for="item in char.series.items" :key="item.key">
+              <p
+                class="details_item_text"
+                v-for="item in char.series.items"
+                :key="item.key"
+              >
                 {{ item.name }}
               </p>
             </div>
             <div class="details_item">
               <h3 class="details_item_title">Comics</h3>
-              <p class="details_item_text" v-for="item in char.comics.items" :key="item.key">
+              <p
+                class="details_item_text"
+                v-for="item in char.comics.items"
+                :key="item.key"
+              >
                 {{ item.name }}
               </p>
             </div>

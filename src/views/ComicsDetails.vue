@@ -3,7 +3,11 @@
     <div class="container details_container">
       <div class="details_content" v-for="com in comic" :key="com.key">
         <div class="details_box">
-          <img class="details_img" :src="com.thumbnail.path + '.' + com.thumbnail.extension" alt="" />
+          <img
+            class="details_img"
+            :src="com.thumbnail.path + '.' + com.thumbnail.extension"
+            alt=""
+          />
         </div>
         <div class="details_info">
           <h3 class="details_text">{{ com.title }}</h3>
@@ -25,13 +29,21 @@
             </div>
             <div class="details_item">
               <h3 class="details_item_title">Creators</h3>
-              <p class="details_item_text" v-for="item in com.creators.items" :key="item.key">
+              <p
+                class="details_item_text"
+                v-for="item in com.creators.items"
+                :key="item.key"
+              >
                 {{ item.name + ' - ' + item.role }}
               </p>
             </div>
             <div class="details_item">
               <h3 class="details_item_title">Stories</h3>
-              <p class="details_item_text" v-for="item in com.stories.items" :key="item.key">
+              <p
+                class="details_item_text"
+                v-for="item in com.stories.items"
+                :key="item.key"
+              >
                 {{ item.name }}
               </p>
             </div>
@@ -76,6 +88,4 @@
   };
 </script>
 
-<style lang="scss">
-  
-</style>
+<style lang="scss"></style>

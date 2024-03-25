@@ -3,10 +3,27 @@
     <div class="container">
       <div class="block_search">
         <div class="block_search_item">
-          <input class="input_search" v-model="searchChar" type="text" placeholder="Enter character..." />
+          <input
+            class="input_search"
+            v-model="searchChar"
+            type="text"
+            placeholder="Enter character..."
+          />
           <div class="block_btn_search">
-            <button class="btn_search" type="button" name="Search" @click="searchCharacter(searchChar)">SEARCH</button>
-            <button class="btn_search" id="SearchReset" v-if="searchResults.results" @click="$router.go(0)">
+            <button
+              class="btn_search"
+              type="button"
+              name="Search"
+              @click="searchCharacter(searchChar)"
+            >
+              SEARCH
+            </button>
+            <button
+              class="btn_search"
+              id="SearchReset"
+              v-if="searchResults.results"
+              @click="$router.go(0)"
+            >
               Reset
             </button>
           </div>
@@ -14,7 +31,8 @@
       </div>
       <h2 class="title">CHARACTERS</h2>
       <div class="loader_block" v-if="!characters.results">
-        <v-progress-circular class="loader" :size="50" :width="5" indeterminate> </v-progress-circular>
+        <v-progress-circular class="loader" :size="50" :width="5" indeterminate>
+        </v-progress-circular>
       </div>
       <div class="wrapper_result" v-else>
         <SearchResultsCharacters
@@ -22,7 +40,11 @@
           :search-results="searchResults"
           @search-character="searchCharacter"
         />
-        <AllResultsCharacters v-else :characters="characters" @get-characters="getCharacters" />
+        <AllResultsCharacters
+          v-else
+          :characters="characters"
+          @get-characters="getCharacters"
+        />
       </div>
     </div>
     <BackTop />

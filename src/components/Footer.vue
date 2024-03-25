@@ -4,8 +4,20 @@
       <div class="footer_container">
         <div class="footer_content">
           <div class="footer_link">
-            <a class="footer_link_item" href="https://www.marvel.com/corporate/about" target="_blank"> ABOUT MARVEL </a>
-            <a class="footer_link_item" href="https://developer.marvel.com/ " target="_blank"> project source </a>
+            <a
+              class="footer_link_item"
+              href="https://www.marvel.com/corporate/about"
+              target="_blank"
+            >
+              ABOUT MARVEL
+            </a>
+            <a
+              class="footer_link_item"
+              href="https://developer.marvel.com/ "
+              target="_blank"
+            >
+              project source
+            </a>
           </div>
           <a href="#">
             <img class="footer_img" src="../assets/marvel-chrome-icon-194.png" alt="" />
@@ -43,6 +55,4 @@
   };
 </script>
 
-<style lang="scss">
-  
-</style>
+<style lang="scss"></style>
